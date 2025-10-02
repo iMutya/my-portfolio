@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pearl Ann Solinap — Portfolio</title>
+  <style>
+    :root {
+      --bg: #f9fafb;
+      --text: #1f2937;
+      --subtext: #4b5563;
+      --card: #ffffff;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --border: #e5e7eb;
+      --max-width: 1100px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: auto;
+      padding: 24px;
+    }
+
+    header {
+      padding: 16px 0;
+    }
+
+    h1 { font-size: 28px; font-weight: 700; }
+    .sub { color: var(--subtext); font-size: 15px; }
+
+    section { margin: 48px 0; }
+    h2 { font-size: 22px; margin-bottom: 16px; border-bottom: 2px solid var(--border); padding-bottom: 6px; }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      margin-top: 48px;
+      padding: 0 12px;
+    }
+    .hero h1 { font-size: 34px; }
+    .hero p { margin: 12px auto; max-width: 600px; color: var(--subtext); }
+    .btn {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 10px 18px;
+      background: var(--accent);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: var(--accent-hover); }
+
+    /* About */
+    .about {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .about img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--border);
+    }
+    .about p {
+      color: var(--subtext);
+      max-width: 700px;
+    }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .project {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 18px;
+      border-radius: 12px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .project:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    }
+    .project h3 { margin-bottom: 8px; }
+    .tags { margin: 8px 0; }
+    .tag {
+      display: inline-block;
+      padding: 4px 10px;
+      margin: 4px 4px 0 0;
+      background: #eff6ff;
+      color: #1e40af;
+      font-size: 12px;
+      border-radius: 999px;
+    }
+    .github-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 14px;
+      background: #24292e;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .github-btn:hover { background: #000; }
+
+    /* Skills */
+    .skills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill {
+      background: #f3f4f6;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--subtext);
+    }
+
+    /* Certifications */
+    .certifications {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .cert {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 16px;
+      border-radius: 12px;
+    }
+    .cert h3 { margin-bottom: 6px; }
+    .cert p { color: var(--subtext); font-size: 14px; }
+    .cert a {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 14px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .cert a:hover { color: var(--accent-hover); }
+
+    /* Contact */
+    .contact p { margin-bottom: 8px; }
+    footer {
+      margin-top: 40px;
+      padding: 20px 0;
+      text-align: center;
+      color: var(--subtext);
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+      .about {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about img {
+        margin-bottom: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        font-size: 15px;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      .hero h1 {
+        font-size: 24px;
+      }
+      .btn {
+        padding: 8px 14px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Pearl Ann Solinap</h1>
+      <div class="sub">Aspiring ??</div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Hi, I'm Pearly 👋</h1>
+      <p>
+        I’m a developer passionate about building impactful software and games. 
+        Skilled in Godot, React Native, Express, and Python — I specialize in 
+        crafting efficient solutions with clean code.
+      </p>
+      <a href="resume.pdf" class="btn" download>Download Resume</a>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about">
+        <img src="./assets/me.jpg" alt="Profile Photo">
+        <p>
+          I am an IT student and aspiring software developer with a strong foundation in computer security. 
+          I enjoy creating practical, innovative, and user-focused digital solutions, leveraging skills in Python, 
+          Flask, MySQL, front-end technologies, and some experience in mobile development. I am open to internships, 
+          freelance work, and collaborative projects that challenge me to grow and innovate. 
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>BIZNest — Capstone Project</h3>
+          <p>BIZNest is a digital marketplace designed to empower MSMEs in Iloilo by providing smart inventory management, 
+            AI-driven insights, and user-friendly tools for efficient product trading.</p>
+          <div class="tags">
+            <span class="tag">React Native</span>
+            <span class="tag">Flask</span>
+            <span class="tag">Full-stack</span>
+          </div>
+          <a href="" target="_blank" class="github-btn">View on GitHub</a>
+        </div>
+
+        <div class="project">
+          <h3>PlanITsmart</h3>
+          <p>PlanITSmart is a scheduling and notes management system for students and teachers, enabling event and note tracking, 
+            visual dashboards, and printable schedules for better organization.</p>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Javascript</span>
+            <span class="tag">EJS</span>
+          </div>
+          <a href="" target="_blank" class="github-btn">View on GitHub</a>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="skill">Python</span>
+        <span class="skill">Java</span>
+        <span class="skill">Javascript</span>
+        <span class="skill">PHP</span>
+        <span class="skill">SQL</span>
+        <span class="skill">React Native</span>
+        <span class="skill">Node / Express</span>
+        <span class="skill">UI/UX Design</span>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <div class="certifications">
+        <div class="cert">
+          <h3>??</h3>
+          <p>??</p>
+          <a href="certificate-link.pdf" target="_blank">View Certificate</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact">
+        <p><strong>Email:</strong> pearlannsolinap111@gmail.com <br>
+          <a href="https://mail.google.com/mail/?view=cm&to=Pearl Ann Solinap <pearlannsolinap111@gmail.com>" target="_blank">
+            Open in Gmail
+          </a> | 
+          <a href="mailto:Pearl Ann Solinap <pearlannsolinap111@gmail.com>">
+            Use Default Email App
+          </a>
+        </p>
+        <p><strong>Location:</strong>Iloilo, Philippines</p>
+        <p><strong>Availability:</strong> Open for freelancing & collaborations</p>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Pearl Ann Solinap. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
